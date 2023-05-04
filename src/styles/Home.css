@@ -172,7 +172,7 @@ section:first-child img {
 }
 
 .cardFace {
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   overflow: hidden;
@@ -298,6 +298,7 @@ section:first-child img {
       rgba(var(--callout-rgb), 0.5)
     );
     background-clip: padding-box;
+    -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
   }
 
