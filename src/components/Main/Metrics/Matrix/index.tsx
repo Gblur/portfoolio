@@ -7,6 +7,8 @@ import {
   Tooltip,
   Colors,
   Legend,
+  ChartOptions,
+  ChartData,
 } from "chart.js";
 import {Radar} from "react-chartjs-2";
 import useStore from "../../../../../store";
@@ -22,6 +24,7 @@ ChartJS.register(
 
 export const data = {
   labels: ["React", "Typescript", "HTML", "CSS", "Node.js"],
+  color: ["green"],
   datasets: [
     {
       label: "Skills",
@@ -29,6 +32,10 @@ export const data = {
     },
   ],
 };
+
+interface RadarProps {
+  options: ChartOptions<"radar">;
+}
 
 export function RadarChart() {
   const {isDarkMode} = useStore((state) => state);
@@ -59,6 +66,9 @@ export function RadarChart() {
           stepSize: 1,
           color: isDarkMode ? "white" : "black",
           backdropColor: isDarkMode ? "black" : "white",
+        },
+        pointLabels: {
+          color: isDarkMode ? "white" : "black",
         },
       },
     },
