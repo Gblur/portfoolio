@@ -6,26 +6,22 @@ type Props = {
   alt: string;
   title: string;
   description: string;
+  link: string;
 };
 
-export default function Card({src, alt, title, description}: Props) {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  function handleCardFlip() {
-    setIsFlipped((isflipped) => !isflipped);
-  }
-
+export default function Card({src, alt, title, description, link}: Props) {
   return (
-    <div onClick={handleCardFlip} className="card">
-      <div className={`cardInner ${isFlipped ? "flipped" : ""}`}>
+    <div className="card">
+      <div className={`cardInner`}>
         <div className="cardFace cardFront">
           <Image src={src} fill alt={alt} />
           <figure>
-            <figcaption>{title}</figcaption>
+            <figcaption>Project</figcaption>
           </figure>
         </div>
         <div className="cardFace cardBack">
           <span>{description}</span>
+          <a href={link}>Project</a>
         </div>
       </div>
     </div>

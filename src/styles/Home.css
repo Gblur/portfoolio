@@ -168,7 +168,7 @@ section:first-child img {
   position: relative;
 }
 
-.cardInner.flipped {
+.card:hover .cardInner {
   transform: rotateY(180deg);
 }
 
@@ -188,6 +188,9 @@ section:first-child img {
 }
 
 .cardBack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transform: rotateY(180deg);
 }
 
@@ -318,7 +321,7 @@ section:first-child img {
   }
 }
 
-/* Tablet and Smaller Desktop */
+/* Tablet and Smaller Desktop
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
@@ -342,4 +345,4 @@ section:first-child img {
   to {
     transform: rotate(0deg);
   }
-}
+} */

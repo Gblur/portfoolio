@@ -5,6 +5,7 @@
   --border-radius: 7px;
   --card-border-rgb: 255, 255, 255;
   --primary-color: #4caf50;
+  --primary-color-highlight: 6ad46d;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -23,11 +24,17 @@ body {
 }
 
 a {
-  color: inherit;
+  display: inline-flex;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 a:hover {
+  color: var(--primary-color-highlight);
+}
+
+section > div > a:hover {
+  transition: ease-in-out 200ms;
   transform: scale(1.2);
 }
 

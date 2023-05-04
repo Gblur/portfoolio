@@ -25,11 +25,7 @@ export const data = {
   datasets: [
     {
       label: "Skills",
-      data: [1, 1, 2, 2, 2],
-    },
-    {
-      label: "Personal",
-      data: [2, 2, 2, 2, 2],
+      data: [3.5, 2.5, 3.5, 3, 2],
     },
   ],
 };
