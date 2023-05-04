@@ -18,31 +18,30 @@ export default function CenteredTabs() {
   };
 
   return (
-    <section>
-      <Box>
-        <TabContext value={value}>
-          <Tabs value={value} onChange={handleChange} centered>
-            <Tab label="Experience" value="1" />
-            <Tab label="Skills" value="2" />
-            <Tab label="Projects" value="3" />
-            <Tab label="Imprint" value="4" />
-          </Tabs>
-          <TabPanel value="1">
-            <OppositeContentTimeline />
-          </TabPanel>
-          <TabPanel value="2">
-            <div className="chart-container">
-              <RadarChart />
-            </div>
-          </TabPanel>
-          <TabPanel value="3">
-            <PortFolio />
-          </TabPanel>
-          <TabPanel value="4">
-            <Imprint />
-          </TabPanel>
-        </TabContext>
-      </Box>
-    </section>
+    <TabContext value={value}>
+      <Tabs value={value} onChange={handleChange} centered>
+        <Tab label="Experience" value="1" />
+        <Tab label="Skills" value="2" />
+        <Tab label="Projects" value="3" />
+        <Tab label="Imprint" value="4" />
+      </Tabs>
+
+      <section>
+        <TabPanel value="1">
+          <OppositeContentTimeline />
+        </TabPanel>
+        <TabPanel value="2">
+          <div className="chart-container">
+            <RadarChart />
+          </div>
+        </TabPanel>
+        <TabPanel value="3">
+          <PortFolio />
+        </TabPanel>
+        <TabPanel value="4">
+          <Imprint />
+        </TabPanel>
+      </section>
+    </TabContext>
   );
 }
