@@ -9,6 +9,7 @@ const Techitem = styled.li<ListItemProps>`
   display: inline;
   color: ${(props: any) => !props.isDarkMode && "var(--primary-color)"};
   background: ${(props: any) => props.isDarkMode && "var(--primary-color)"};
+  word-break: keep-all;
   padding: 5px;
 `;
 

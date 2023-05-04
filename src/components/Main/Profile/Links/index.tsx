@@ -11,10 +11,13 @@ export default function LinksList({}: Props) {
     <section>
       <h1>Find me</h1>
       <Stack spacing={2} direction="row" justifyContent="center">
-        <Link href="https://github.com/Gblur">
+        <Link href="https://github.com/Gblur" target="_blank">
           <GitHubIcon />
         </Link>
-        <Link href="https://www.linkedin.com/in/florian-gaebler-a317aa115/">
+        <Link
+          href="https://www.linkedin.com/in/florian-gaebler-a317aa115/"
+          target="_blank"
+        >
           <LinkedInIcon />
         </Link>
       </Stack>

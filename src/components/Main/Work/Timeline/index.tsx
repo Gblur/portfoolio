@@ -12,7 +12,7 @@ import useStore from "../../../../../store";
 const data = {
   tiplu: ["Typescript", "React", "ASP.net"],
   gimmick: ["Typescript", "Wordpress", "Node.js"],
-  marktplatz: ["React", "Javascript", "Content XXL"],
+  marktplatz: ["React", "Javascript", "ContentXXL"],
 };
 
 export default function OppositeContentTimeline() {
