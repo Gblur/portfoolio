@@ -16,12 +16,14 @@ export default function Card({src, alt, title, description, link}: Props) {
         <div className="cardFace cardFront">
           <Image src={src} fill alt={alt} />
           <figure>
-            <figcaption>Project</figcaption>
+            <figcaption>{title}</figcaption>
           </figure>
         </div>
         <div className="cardFace cardBack">
           <span>{description}</span>
-          <a href={link}>Project</a>
+          <a target="_blank" href={link}>
+            Link to Page
+          </a>
         </div>
       </div>
     </div>

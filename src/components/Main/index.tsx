@@ -10,12 +10,10 @@ type Props = {
 
 export default function MainContent({checked}: Props) {
   return (
-    <Fade in={true}>
-      <main>
-        <Introduction />
-        <CenteredTabs />
-        <Links />
-      </main>
-    </Fade>
+    <main>
+      <Introduction />
+      <CenteredTabs />
+      <Links />
+    </main>
   );
 }

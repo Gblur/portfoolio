@@ -12,7 +12,6 @@ section {
   position: relative;
   height: 100%;
   margin-bottom: 3em;
-  box-shadow: 0 0 7px white;
   border-radius: 7px;
   padding: 2rem;
 }
@@ -73,7 +72,7 @@ section:first-child img {
 .chart-container {
   position: relative;
   margin: auto;
-  max-width: 350px;
+  max-width: 400px;
 }
 
 .description {
@@ -113,6 +112,7 @@ section:first-child img {
   grid-template-columns: repeat(2, minmax(300px, auto));
   max-width: 100%;
   justify-content: center;
+  margin: auto;
 }
 
 .card {
@@ -190,8 +190,8 @@ section:first-child img {
 .cardBack {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   transform: rotateY(180deg);
+  text-align: left;
 }
 
 .center {
@@ -321,28 +321,24 @@ section:first-child img {
   }
 }
 
-/* Tablet and Smaller Desktop
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
+/* Tablet and Smaller Desktop */
+@media (min-width: 383px) and (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  ul > li {
+    flex-wrap: wrap;
+  }
+  ul > li > div:nth-child(2) {
+    display: none;
+  }
+
+  ul > li {
+    justify-content: start;
+  }
+
+  ul > li div {
+    text-align: left !important;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-} */

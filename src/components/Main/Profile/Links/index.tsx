@@ -9,7 +9,7 @@ type Props = {};
 export default function LinksList({}: Props) {
   return (
     <section>
-      <h1>Find me</h1>
+      <h1>Contact</h1>
       <Stack spacing={2} direction="row" justifyContent="center">
         <Link href="https://github.com/Gblur" target="_blank">
           <GitHubIcon />
