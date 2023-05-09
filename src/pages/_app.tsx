@@ -1,11 +1,11 @@
 import type {AppProps} from "next/app";
 import {red, blue, green} from "@mui/material/colors";
 import {ThemeProvider, createTheme} from "@mui/material/styles";
-import Switch from "@mui/material/Switch";
 import "../styles/Home.css";
 import "../styles/globals.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import useStore from "../../store";
+import SwitchDarkmode from "../components/Switch";
 
 const darkTheme = createTheme({
   palette: {
@@ -45,17 +45,11 @@ export default function App({Component, pageProps}: AppProps) {
     toggleDarkMode(target.checked);
   }
 
-  console.log(isDarkMode);
-
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <Component {...pageProps} checked={isDarkMode} />
-      <Switch
-        onChange={handleChange}
-        checked={isDarkMode}
-        sx={{position: "fixed", top: 0, right: 0}}
-      />
+      <SwitchDarkmode onChange={handleChange} checked={isDarkMode} />
 
       {/* <Footer /> */}
     </ThemeProvider>

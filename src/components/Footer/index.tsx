@@ -8,11 +8,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import Paper from "@mui/material/Paper";
 
-type FooterProps = {
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  isDarkMode: boolean;
-};
-
 export default function FixedBottomNavigation({}) {
   const [value, setValue] = React.useState(0);
 

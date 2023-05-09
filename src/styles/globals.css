@@ -6,6 +6,7 @@
   --card-border-rgb: 255, 255, 255;
   --primary-color: #4caf50;
   --primary-color-highlight: 6ad46d;
+  --primary-color-background-light: #8d8d8d45;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -41,8 +42,6 @@ section > div > a:hover {
 ul {
   list-style: none;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   html {
