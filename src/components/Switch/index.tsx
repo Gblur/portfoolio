@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Switch from "@mui/material/Switch";
 import useStore from "../../../store";
-import {css} from "styled-components";
+import { css } from "styled-components";
 
 const MaterialUISwitch = styled(Switch)`
   width: 62;
@@ -59,12 +59,12 @@ type Props = {
   checked: boolean;
 };
 
-export default function SwitchDarkmode({onChange, checked}: Props) {
+export default function SwitchDarkmode({ onChange, checked }: Props) {
   return (
     <MaterialUISwitch
       onChange={onChange}
       checked={checked}
-      sx={{position: "fixed", top: 0, right: 0}}
+      sx={{ position: "fixed", top: 0, right: 0 }}
     />
   );
 }

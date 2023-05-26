@@ -188,10 +188,12 @@ section:first-child img {
 }
 
 .cardBack {
-  display: flex;
-  flex-direction: column;
   transform: rotateY(180deg);
   text-align: left;
+}
+
+.cardBack span {
+  margin-bottom: 1rem;
 }
 
 .center {

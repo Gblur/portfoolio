@@ -16,7 +16,7 @@ const data = {
 };
 
 export default function OppositeContentTimeline() {
-  const {isDarkMode} = useStore();
+  const { isDarkMode } = useStore();
 
   return (
     <Timeline position="alternate">
@@ -46,21 +46,6 @@ export default function OppositeContentTimeline() {
         <TimelineContent>
           Gimmickmedia Frontend <br /> Developer / Game designer
           <Techstack isDarkMode={isDarkMode} company={data.gimmick} />
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          08/2020 - 12/2020
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot variant="outlined" color="primary" />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          Marktplatz GmbH
-          <br />
-          Frontend React developer
-          <Techstack isDarkMode={isDarkMode} company={data.marktplatz} />
         </TimelineContent>
       </TimelineItem>
     </Timeline>
