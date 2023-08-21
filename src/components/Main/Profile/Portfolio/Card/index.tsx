@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   link: string;
 };
 
-export default function Card({src, alt, title, description, link}: Props) {
+export default function Card({ src, alt, title, description, link }: Props) {
   return (
     <div className="card">
       <div className={`cardInner`}>

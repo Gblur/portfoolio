@@ -331,6 +331,7 @@ section:first-child img {
 
   ul > li {
     flex-wrap: wrap;
+    flex-direction: column !important;
   }
   ul > li > div:nth-child(2) {
     display: none;

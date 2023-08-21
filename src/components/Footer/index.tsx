@@ -12,7 +12,7 @@ export default function FixedBottomNavigation({}) {
   const [value, setValue] = React.useState(0);
 
   return (
-    <Box sx={{pb: 7}}>
+    <Box sx={{ pb: 7 }}>
       <Paper
         sx={{
           position: "fixed",
@@ -29,7 +29,7 @@ export default function FixedBottomNavigation({}) {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+          <BottomNavigationAction label="Imprint" icon={<RestoreIcon />} />
           <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
           <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
         </BottomNavigation>
