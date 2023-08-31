@@ -12,7 +12,7 @@ import useStore from "../../../../../store";
 const data = {
   tiplu: ["Typescript", "React", "ASP.net"],
   gimmick: ["Typescript", "Wordpress", "Node.js"],
-  marktplatz: ["React", "Javascript", "ContentXXL"],
+  freelance: ["Unity 3D", "Substance", "React"],
 };
 
 export default function OppositeContentTimeline() {
@@ -31,7 +31,7 @@ export default function OppositeContentTimeline() {
         <TimelineContent>
           Tiplu GmbH
           <br />
-          Frontend React Developer
+          Jr Frontend React Developer
           <Techstack isDarkMode={isDarkMode} company={data.tiplu} />
         </TimelineContent>
       </TimelineItem>
@@ -44,8 +44,23 @@ export default function OppositeContentTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          Gimmickmedia Frontend <br /> Developer / Game designer
+          Gimmickmedia <br />
+          Jr Frontend Developer /<br /> Game designer
           <Techstack isDarkMode={isDarkMode} company={data.gimmick} />
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent color="text.secondary">
+          09/2019 - 02/2021
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot variant="outlined" color="primary" />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          Freelancer <br />
+          Jr Frontend Developer / <br /> Game designer
+          <Techstack isDarkMode={isDarkMode} company={data.freelance} />
         </TimelineContent>
       </TimelineItem>
     </Timeline>
