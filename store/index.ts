@@ -1,4 +1,4 @@
-import {create} from "zustand";
+import { create } from "zustand";
 
 interface darkMode {
   isDarkMode: boolean;
@@ -6,9 +6,9 @@ interface darkMode {
 }
 
 const useStore = create<darkMode>((set) => ({
-  isDarkMode: true,
+  isDarkMode: false,
   toggleDarkMode: (e: any) => {
-    set((state) => ({isDarkMode: e}));
+    set((state) => ({ isDarkMode: e }));
   },
 }));
 

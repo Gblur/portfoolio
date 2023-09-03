@@ -1,11 +1,12 @@
-import type {AppProps} from "next/app";
-import {red, blue, green} from "@mui/material/colors";
-import {ThemeProvider, createTheme} from "@mui/material/styles";
+import type { AppProps } from "next/app";
+import { red, blue, green } from "@mui/material/colors";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "../styles/Home.css";
 import "../styles/globals.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import useStore from "../../store";
 import SwitchDarkmode from "../components/Switch";
+import { useState } from "react";
 
 const darkTheme = createTheme({
   palette: {
@@ -37,8 +38,15 @@ const lightTheme = createTheme({
   },
 });
 
-export default function App({Component, pageProps}: AppProps) {
-  const {isDarkMode, toggleDarkMode} = useStore((state) => state);
+type ThemeContext = {
+  theme: "light" | "dark";
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function App({ Component, pageProps }: AppProps) {
+  const { isDarkMode, toggleDarkMode } = useStore((state) => state);
+
+  const [theme, setTheme] = useState<ThemeContext["theme"]>("light");
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const target = e.target;

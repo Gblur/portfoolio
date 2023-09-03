@@ -10,7 +10,7 @@ import {
   ChartOptions,
   ChartData,
 } from "chart.js";
-import {Radar} from "react-chartjs-2";
+import { Radar } from "react-chartjs-2";
 import useStore from "../../../../../store";
 
 ChartJS.register(
@@ -23,12 +23,12 @@ ChartJS.register(
 );
 
 export const data = {
-  labels: ["React", "Typescript", "HTML", "CSS", "Node.js"],
+  labels: ["TS/JS", "HTML/CSS", "Node.js", "REST", "GraphQL", "React"],
   color: ["green"],
   datasets: [
     {
       label: "Skills",
-      data: [3.5, 2.5, 3.5, 3, 2],
+      data: [4, 4, 2, 3, 2, 4],
     },
   ],
 };
@@ -38,7 +38,7 @@ interface RadarProps {
 }
 
 export function RadarChart() {
-  const {isDarkMode} = useStore((state) => state);
+  const { isDarkMode } = useStore((state) => state);
 
   const options = {
     plugins: {
