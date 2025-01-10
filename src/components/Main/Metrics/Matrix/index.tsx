@@ -62,7 +62,7 @@ export function RadarChart() {
     // },
     plugins: {
       legend: {
-        onClick: (e, legendItem, legend) => {
+        onClick: ( legendItem: any, legend: any) => {
           let index = legendItem.datasetIndex;
           const ci = legend.chart;
           
