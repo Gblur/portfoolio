@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -12,6 +12,8 @@ import {
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
 import useStore from "../../../../../store";
+import { BorderColor } from "@mui/icons-material";
+import { colors } from "@mui/material";
 
 ChartJS.register(
   RadialLinearScale,
@@ -22,34 +24,59 @@ ChartJS.register(
   Colors
 );
 
-export const data = {
-  labels: ["TS/JS", "HTML/CSS", "Node.js", "REST", "GraphQL", "React"],
-  color: ["green"],
-  datasets: [
-    {
-      label: "Skills",
-      data: [4, 4, 2, 3, 2, 4],
-    },
-  ],
-};
+
+
 
 interface RadarProps {
   options: ChartOptions<"radar">;
 }
 
+const data: ChartData<"radar", number[], string> = {
+  labels: ["TS/JS", "HTML/CSS", "Node.js", "REST", "GraphQL", "React" ],
+  datasets: [
+    {
+      label: "Dev",
+      data: [4, 4, 2, 3, 2, 4],
+      borderColor: "#4caf50"
+    },
+    {
+      label: "Admin",
+      data: [2, 2, 2, 2, 2, 2],
+      borderColor: "yellow",
+      hidden: true
+    },
+  ],
+};
+
 export function RadarChart() {
   const { isDarkMode } = useStore((state) => state);
+  const [dataState, setDataState] = useState(data);
 
+
+  
   const options = {
+    // elements: {
+    //   line: {
+    //     borderColor: "#4caf50",
+    //   },
+    // },
     plugins: {
-      colors: {
-        forceOverride: true,
-        enabled: false,
-      },
-    },
-    elements: {
-      line: {
-        borderColor: "#4caf50",
+      legend: {
+        onClick: (e, legendItem, legend) => {
+          let index = legendItem.datasetIndex;
+          const ci = legend.chart;
+          
+          if (index < 1) {
+            ci.show(index);
+            ci.hide(1);
+            setDataState((data) => ({...data, labels: ["TS/JS", "HTML/CSS", "Node.js", "REST", "GraphQL", "React"]}))
+          } else {
+            ci.show(index);
+            ci.hide(0);
+            setDataState((data) => ({...data, labels: ["Networking", "Linux", "Security","Databases" , "Docker","Cloud" ]}))
+          }
+          // Trigger fade effects
+        },
       },
     },
     scales: {
@@ -74,5 +101,5 @@ export function RadarChart() {
     },
   };
 
-  return <Radar data={data} options={options} />;
+  return <Radar data={dataState} updateMode="resize" options={options} />;
 }

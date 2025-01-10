@@ -18,6 +18,7 @@ export default function CenteredTabs() {
   };
 
   return (
+
     <TabContext value={value}>
       <Tabs value={value} onChange={handleChange} centered>
         <Tab label="Experience" value="1" />

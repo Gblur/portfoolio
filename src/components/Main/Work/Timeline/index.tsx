@@ -12,7 +12,7 @@ import useStore from "../../../../../store";
 const data = {
   tiplu: ["Typescript", "React", "ASP.net"],
   gimmick: ["Typescript", "Wordpress", "Node.js"],
-  freelance: ["Unity 3D", "Substance", "React"],
+  freelance: ["Unity", "Substance", "React"],
 };
 
 export default function OppositeContentTimeline() {
@@ -51,7 +51,7 @@ export default function OppositeContentTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
-          09/2019 - 02/2021
+          04/2020 - 02/2021
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot variant="outlined" color="primary" />

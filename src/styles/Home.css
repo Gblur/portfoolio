@@ -59,9 +59,7 @@ section h1:after {
 
 section:first-child img {
   position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translate(-50%);
+  left: -30%;
   opacity: 0.5;
 }
 
@@ -256,6 +254,10 @@ section:first-child img {
     margin-bottom: 120px;
     max-width: 320px;
     text-align: center;
+  }
+
+  section:first-child img {
+    opacity: 0;
   }
 
   .card {
