@@ -61,6 +61,8 @@ section:first-child img {
   position: absolute;
   left: -30%;
   opacity: 0.5;
+  background-position: center;
+  object-fit: cover;
 }
 
 .techstack__list {
@@ -257,7 +259,7 @@ section:first-child img {
   }
 
   section:first-child img {
-    opacity: 0;
+    display: none;
   }
 
   .card {
