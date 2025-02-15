@@ -8,7 +8,6 @@ export default function Imprint({}: Props) {
       <h3>Imprint Owner and operator:</h3>
       <br />
       <p>Florian Gaebler</p> 
-      <p>Bornemannstrasse 1</p>
       <p>21073 Hamburg</p>
       <p>floriangaebler87@gmail.com</p>
       <br />
