@@ -30,7 +30,7 @@ section::-webkit-scrollbar {
 }
 
 .MuiTabPanel-root > * {
-  margin: 50px auto;
+  margin: 2em auto;
 }
 section h1 {
   position: relative;
@@ -262,7 +262,7 @@ section:nth-child(2) img {
     text-align: center;
   }
 
-  section:first-child img {
+  section:nth-child(2) img {
     display: none;
   }
 
