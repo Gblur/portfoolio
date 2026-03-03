@@ -20,13 +20,18 @@ section::-webkit-scrollbar {
   display: none;
 }
 
-section:nth-child(3) {
-  flex: 3;
-  min-height: 500px;
-  max-height: 500px;
-  overflow-y: auto;
+.MuiTabs-root {
+  position: sticky;
+  display: block;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-radius: 0 15px;
 }
 
+.MuiTabPanel-root > * {
+  margin: 50px auto;
+}
 section h1 {
   position: relative;
   text-align: center;
@@ -57,7 +62,7 @@ section h1:after {
   background: #4caf50;
 }
 
-section:first-child img {
+section:nth-child(2) img {
   position: absolute;
   left: -30%;
   opacity: 0.5;
@@ -112,7 +117,6 @@ section:first-child img {
   grid-template-columns: repeat(2, minmax(300px, auto));
   max-width: 100%;
   justify-content: center;
-  margin: auto;
 }
 
 .card {

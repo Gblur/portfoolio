@@ -45,7 +45,6 @@ type ThemeContext = {
 
 export default function App({ Component, pageProps }: AppProps) {
   const { isDarkMode, toggleDarkMode } = useStore((state) => state);
-
   const [theme, setTheme] = useState<ThemeContext["theme"]>("dark");
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {

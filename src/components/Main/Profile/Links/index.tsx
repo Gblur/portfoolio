@@ -9,16 +9,15 @@ type Props = {};
 export default function LinksList({}: Props) {
   return (
     <section>
-      <h1>Contact</h1>
       <Stack spacing={2} direction="row" justifyContent="center">
         <Link href="https://github.com/Gblur" target="_blank">
-          <GitHubIcon />
+          <GitHubIcon sx={{ fontSize: 40 }}/>
         </Link>
         <Link
           href="https://www.linkedin.com/in/florian-gaebler-a317aa115/"
           target="_blank"
         >
-          <LinkedInIcon />
+          <LinkedInIcon sx={{ fontSize: 40 }}/>
         </Link>
       </Stack>
     </section>
