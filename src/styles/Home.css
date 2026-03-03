@@ -26,7 +26,11 @@ section::-webkit-scrollbar {
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
-  border-radius: 0 15px;
+  border-radius: 15px 0;
+}
+
+.MuiSwitch-root {
+  z-index: 1001;
 }
 
 .MuiTabPanel-root > * {
